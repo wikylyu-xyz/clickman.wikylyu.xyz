@@ -40,6 +40,13 @@
     alt="clickman screenshot"
   />
 
+  <div class="talks">
+    <div class="talk" *ngFor="let r of talks">
+      <i>"{{ r.text }}"</i>
+      <em> -- {{ r.name }}</em>
+    </div>
+  </div>
+
   <div class="download">
     <a
       mat-fab
