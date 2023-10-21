@@ -1,0 +1,27 @@
+:host {
+  mat-toolbar {
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+    }
+  }
+
+  div.container {
+    padding: 120px 10px 80px 10px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+
+    img.author-avatar {
+      width: 140px;
+      height: 140px;
+      background-color: white;
+      border-radius: 70px;
+      margin-bottom: 40px;
+    }
+  }
+}

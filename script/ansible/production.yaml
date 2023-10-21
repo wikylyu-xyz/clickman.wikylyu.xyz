@@ -1,0 +1,16 @@
+- hosts: localhost
+  tasks:
+    - name: build clickman.wikylyu.xyz
+      command: "{{item}}"
+      with_items:
+        - git checkout master
+        - ng build --configuration production
+      args:
+        chdir: "{{playbook_dir}}/../.."
+- hosts: wikylyu.xyz
+  user: wiky
+  tasks:
+    - name: deploy clickman.wikylyu.xyz
+      synchronize:
+        src: "{{playbook_dir}}/../../dist/clickman.wikylyu.xyz/"
+        dest: /home/wiky/run/clickman.wikylyu.xyz/
